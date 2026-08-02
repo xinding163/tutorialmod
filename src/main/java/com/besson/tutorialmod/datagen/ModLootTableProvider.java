@@ -33,7 +33,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ICE_ETHER_BLOCK);
         addDrop(ModBlocks.RAW_ICE_ETHER_BLOCK);
         //addDrop(ModBlocks.ICE_ETHER_ORE,oreDrops(ModBlocks.ICE_ETHER_ORE, ModItems.RAW_ICE_ETHER));
-        addDrop(ModBlocks.RAW_ICE_ETHER_BLOCK,copperOreLikeDrops(ModBlocks.RAW_ICE_ETHER_BLOCK,ModItems.RAW_ICE_ETHER));
+        addDrop(ModBlocks.ICE_ETHER_ORE,copperOreLikeDrops(ModBlocks.ICE_ETHER_ORE,ModItems.RAW_ICE_ETHER));
     }
 
     public LootTable.Builder copperOreLikeDrops(Block drop, Item dropItem) {

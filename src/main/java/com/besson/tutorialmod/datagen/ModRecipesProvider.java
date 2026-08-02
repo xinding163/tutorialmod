@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipesProvider extends FabricRecipeProvider {
-    public static final List<ItemConvertible> ICE_ETHER = List.of(ModItems.RAW_ICE_ETHER,ModBlocks.ICE_ETHER_BLOCK, Items.ICE);
+    public static final List<ItemConvertible> ICE_ETHER = List.of(ModItems.RAW_ICE_ETHER,ModBlocks.ICE_ETHER_ORE, Items.ICE);
 
     public ModRecipesProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -40,7 +40,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         offerBlasting(exporter, ICE_ETHER, RecipeCategory.MISC, ModItems.ICE_ETHER,0.7f,100,"ice_ether");//高炉
 
         offerFoodCookingRecipe(exporter, "campfire_cooking",RecipeSerializer.CAMPFIRE_COOKING, CampfireCookingRecipe::new,
-                600,ModItems.RAW_ICE_ETHER,ModItems.ICE_ETHER,0.35f);//营火
+                200,ModItems.RAW_ICE_ETHER,ModItems.ICE_ETHER,0.35f);//营火
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,Items.SUGAR,3)
                 .pattern("###")
@@ -58,7 +58,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                                         .criterion("has_item", RecipeProvider.conditionsFromItem(Items.APPLE))
                                                 .offerTo(exporter, Identifier.of(TutorialMod.MOD_ID, "god_dapple"));
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC,ModItems.RAW_ICE_ETHER)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC,ModBlocks.ICE_ETHER_ORE)
                 .input(ModItems.RAW_ICE_ETHER)
                 .input(Items.STONE)
                 .criterion("has_item", RecipeProvider.conditionsFromItem(ModItems.RAW_ICE_ETHER))
