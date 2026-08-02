@@ -20,7 +20,10 @@
 		],
 		"fabric-datagen": [
 			"com.besson.tutorialmod.TutorialModDataGenerator"
-		]
+		],
+        "client": [
+            "com.besson.tutorialmod.TutorialModClient"
+        ]
 	},
 	"mixins": [
 		"tutorialmod.mixins.json"
