@@ -11,6 +11,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import com.besson.tutorialmod.block.ModBlocks;
 
 public class ModItemGroups {
 //    public static final RegistryKey<ItemGroup> TUTORIAL_GROUP = register("tutorial_group");
@@ -29,15 +30,21 @@ public class ModItemGroups {
 //                .build());
 //        TutorialMod.LOGGER.info("Registering Tutorial Groups");
 //    }
-    public static final ItemGroup TUTORIAL_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(TutorialMod.MOD_ID,"tutorial_group"),
+    public static final ItemGroup TUTORIAL_GROUP = //注册物品组
+        Registry.register(Registries.ITEM_GROUP, Identifier.of(TutorialMod.MOD_ID,"tutorial_group"),
         ItemGroup.create(null,-1).displayName(Text.translatable("itemGroup.tutorial_group"))
                 .icon(()-> new ItemStack(ModItems.ICE_ETHER))
                 .entries((displayContext, entries) -> {
                     entries.add(ModItems.ICE_ETHER);
+                    entries.add(ModItems.RAW_ICE_ETHER);
                     entries.add(Blocks.BRICKS);
                     entries.add(Items.DIAMOND);
+
+                    entries.add(ModBlocks.ICE_ETHER_BLOCK);
+                    entries.add(ModBlocks.ICE_ETHER_ORE);
+                    entries.add(ModBlocks.RAW_ICE_ETHER_BLOCK);
                 }).build());
     public static void registerItemGroups() {
         TutorialMod.LOGGER.info("Registering Tutorial Groups");
-    }
+    }//启动程序
 }
