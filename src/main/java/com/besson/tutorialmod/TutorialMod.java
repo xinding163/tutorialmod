@@ -3,13 +3,11 @@ package com.besson.tutorialmod;
 import com.besson.tutorialmod.block.ModBlocks;
 import com.besson.tutorialmod.item.ModItemGroups;
 import com.besson.tutorialmod.item.ModItems;
-import com.besson.tutorialmod.mixin.GrassColorsMixin;
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.util.Identifier;
 
-import net.minecraft.world.biome.GrassColors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,13 +27,8 @@ public class TutorialMod implements ModInitializer {
         ModItems.registerModItems();
         ModItemGroups.registerItemGroups();
         ModBlocks.registerModBlocks();
+//      FuelRegistry.INSTANCE.add(ModItems.ANTHRACITE,1600); fabric api 中的燃烧物添加方法
 
-        int [] colorMap = GrassColorsMixin.getColorMap();
-        LOGGER.info("Grass color map length: {}" , colorMap.length);
-
-        int [] newColorMap = new int[128];
-        GrassColorsMixin.setColorMap(newColorMap);
-        LOGGER.info("New Grass color map length: {}" , GrassColorsMixin.getColorMap().length);
 
 		LOGGER.info("Hello Fabric world!");
 	}

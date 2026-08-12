@@ -17,6 +17,7 @@ public class ModItems {
     public static final Item RAW_ICE_ETHER = registerItems("raw_ice_ether", new Item(new Item.Settings()));
     public static final Item CHEESE = registerItems("cheese", new Item(new Item.Settings().food(ModFoodComponents.CHEESE)));
     public static final Item STRAWBERRY = registerItems("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)));
+    public static final Item ANTHRACITE = registerItems("anthracite", new Item(new Item.Settings()));
 
     //mod中item的注册方法
     private static Item registerItems(String id, Item item) {

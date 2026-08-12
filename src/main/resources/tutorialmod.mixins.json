@@ -3,9 +3,8 @@
   "package": "com.besson.tutorialmod.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "EndermanEntityMixin",
-    "ExampleMixin",
-    "GrassColorsMixin"
+    "AbstractFurnaceBlockEntityMixin",
+    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1
