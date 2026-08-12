@@ -17,6 +17,8 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
     public void generateTranslations(RegistryWrapper.WrapperLookup wrapperLookup, TranslationBuilder translationBuilder) {
         translationBuilder.add(ModItems.ICE_ETHER, "Ice Ether");
         translationBuilder.add(ModItems.RAW_ICE_ETHER, "Raw Ice Ether");
+        translationBuilder.add(ModItems.CHEESE, "Cheese");
+        translationBuilder.add(ModItems.STRAWBERRY, "Strawberry");
 
         translationBuilder.add(ModBlocks.ICE_ETHER_BLOCK, "Ice Ether Block");
         translationBuilder.add(ModBlocks.RAW_ICE_ETHER_BLOCK, "Raw Ice Ether Block");

@@ -35,10 +35,12 @@ public class ModItemGroups {
         ItemGroup.create(null,-1).displayName(Text.translatable("itemGroup.tutorial_group"))
                 .icon(()-> new ItemStack(ModItems.ICE_ETHER))
                 .entries((displayContext, entries) -> {
-                    entries.add(ModItems.ICE_ETHER);
-                    entries.add(ModItems.RAW_ICE_ETHER);
                     entries.add(Blocks.BRICKS);
                     entries.add(Items.DIAMOND);
+                    entries.add(ModItems.ICE_ETHER);
+                    entries.add(ModItems.RAW_ICE_ETHER);
+                    entries.add(ModItems.CHEESE);
+                    entries.add(ModItems.STRAWBERRY);
 
                     entries.add(ModBlocks.ICE_ETHER_BLOCK);
                     entries.add(ModBlocks.ICE_ETHER_ORE);
