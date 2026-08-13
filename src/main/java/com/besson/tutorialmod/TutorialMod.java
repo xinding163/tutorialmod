@@ -3,6 +3,7 @@ package com.besson.tutorialmod;
 import com.besson.tutorialmod.block.ModBlocks;
 import com.besson.tutorialmod.item.ModItemGroups;
 import com.besson.tutorialmod.item.ModItems;
+import com.besson.tutorialmod.tags.ModBlockTags;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -27,6 +28,7 @@ public class TutorialMod implements ModInitializer {
         ModItems.registerModItems();
         ModItemGroups.registerItemGroups();
         ModBlocks.registerModBlocks();
+        ModBlockTags.registerModBlockTags();
 //      FuelRegistry.INSTANCE.add(ModItems.ANTHRACITE,1600); fabric api 中的燃烧物添加方法
 
 
