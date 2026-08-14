@@ -27,5 +27,8 @@ public class ModENUSLanProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.ICE_ETHER_ORE, "Ice Ether Ore");
 
         translationBuilder.add("itemGroup.tutorial_group", "Tutorial Group");
+
+        translationBuilder.add("item.tutorialmod.prospector.shift_tooltip","A tool used to find ores.");
+        translationBuilder.add("item.tutorialmod.prospector.tooltip","Hold \u00A76shift§r for more information.");
     }
 }

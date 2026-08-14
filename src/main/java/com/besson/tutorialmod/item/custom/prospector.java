@@ -8,11 +8,15 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class prospector extends Item
 {
@@ -70,5 +74,16 @@ public class prospector extends Item
 
     private boolean isRightBlock(BlockState blockState){
         return blockState.isIn(ModBlockTags.ORE_LIST);
+    }
+
+    @Override//工具信息方法
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        super.appendTooltip(stack, context, tooltip, type);
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("item.tutorialmod.prospector.shift_tooltip"));
+        }
+        else {
+            tooltip.add(Text.translatable("item.tutorialmod.prospector.tooltip"));
+        }
     }
 }
