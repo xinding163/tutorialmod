@@ -20,6 +20,7 @@ public class ModItems {
     public static final Item STRAWBERRY = registerItems("strawberry", new Item(new Item.Settings().food(ModFoodComponents.STRAWBERRY)));
     public static final Item ANTHRACITE = registerItems("anthracite", new Item(new Item.Settings()));
     public static final Item PROSPECTOR = registerItems("prospector", new prospector(new Item.Settings().maxCount(1).maxDamage(127)));
+    public static final Item PLATE = registerItems("plate", new Item(new Item.Settings()));
 
     //mod中item的注册方法
     private static Item registerItems(String id, Item item) {
