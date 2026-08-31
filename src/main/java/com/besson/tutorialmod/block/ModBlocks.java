@@ -14,6 +14,7 @@ public class ModBlocks {
             register("ice_ether_block",
                     new Block(AbstractBlock
                             .Settings.create()
+                            .requiresTool()
                             .strength(3.0f,3.0f)));
 
     public static final Block ICE_ETHER_ORE =

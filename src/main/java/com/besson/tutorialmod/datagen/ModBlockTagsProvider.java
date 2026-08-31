@@ -19,7 +19,17 @@ public class ModBlockTagsProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.ICE_ETHER_BLOCK)
                 .add(ModBlocks.ICE_ETHER_ORE)
-                .add(ModBlocks.RAW_ICE_ETHER_BLOCK);
+                .add(ModBlocks.RAW_ICE_ETHER_BLOCK)
+                .add(ModBlocks.ICE_ETHER_ORE)
+                .add(ModBlocks.ICE_ETHER_STAIRS)
+                .add(ModBlocks.ICE_ETHER_SLAB)
+                .add(ModBlocks.ICE_ETHER_BUTTON)
+                .add(ModBlocks.ICE_ETHER_PRESSURE_PLATE)
+                .add(ModBlocks.ICE_ETHER_FENCE)
+                .add(ModBlocks.ICE_ETHER_FENCE_GATE)
+                .add(ModBlocks.ICE_ETHER_WALL)
+                .add(ModBlocks.ICE_ETHER_DOOR)
+                .add(ModBlocks.ICE_ETHER_TRAPDOOR);
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.RAW_ICE_ETHER_BLOCK);
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
